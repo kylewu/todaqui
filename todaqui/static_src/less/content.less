@@ -1,0 +1,75 @@
+@import "vendor/elements";
+
+.main {
+
+  .category {
+
+    .cat {
+      float: left;
+      width: 25%;
+
+      .box {
+        margin: 10px 10px 0 0;
+        .bordered(#E3E5E6, #E3E5E6, #E3E5E6, #E3E5E6);
+        background: #F9F9F9;
+
+        .top {
+          height: 30px;
+          line-height: 30px;
+          border-bottom: 1px solid #edeff0;
+          font-size: 14px;
+          overflow: hidden;
+          position: relative;
+          .gradient(@color: #F5F5F5, @start: #EEE, @stop: #FFF);
+
+          a {
+            color: #23C098;
+            padding-left: 10px;
+          }
+        }
+
+
+        ul {
+          margin: 8px 0px;
+          list-style-type: none;
+          padding: 0;
+          li {
+            font-size: 14px;
+            a {
+              display: block;
+              line-height: 30px;
+              height: 30px;
+
+              padding-left: 15px;
+              border-left: 3px solid #F9F9F9;
+
+              &:hover {
+                background: #E8EBEC;
+                border-left: 3px solid #00ac73;
+              }
+            }
+          }
+        }
+      }
+    }
+
+  }
+
+  .sidebar{
+    .widget {
+      .title {
+        height: 32px;
+        line-height: 32px;
+        color: green;
+        text-align: center;
+      }
+      .content {
+        background: grey;
+        height: 150px;
+      }
+    }
+
+  }
+
+}
+

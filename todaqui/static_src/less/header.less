@@ -1,0 +1,51 @@
+@import "vendor/elements";
+
+.header {
+  .gradient(#00b073, #00b074, #00ab72);
+  height: 50px;
+
+  .inner {
+    position: relative;
+    margin: 0 auto;
+
+    .logo {
+      height: 50px;
+      position: relative;
+
+      a {
+        text-decoration: none;  
+        color: white;
+        line-height: 50px;
+        font-size: 24px;
+      }
+    }
+
+    .more {
+      float: right;
+
+      div {
+        color: white;
+        height: 25px;
+        float: right;
+        &:hover {
+          background-color: lighten(#00b073, 10%);
+        }
+
+        i {
+          padding: 2px;
+          font-size: 14px;
+          width: 15px;
+          text-align: left;
+        }
+        a {
+          padding: 2px;
+          font-size: 12px;
+          line-height: 25px;
+          color: white;
+        }
+
+      }
+    }
+  }
+
+}

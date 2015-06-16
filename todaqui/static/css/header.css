@@ -1,0 +1,52 @@
+/*---------------------------------------------------
+    LESS Elements 0.9
+  ---------------------------------------------------
+    A set of useful LESS mixins
+    More info at: http://lesselements.com
+  ---------------------------------------------------*/
+.header {
+  background: #00b073;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #00b074), color-stop(1, #00ab72));
+  background: -ms-linear-gradient(bottom, #00b074, #00ab72);
+  background: -moz-linear-gradient(center bottom, #00b074 0%, #00ab72 100%);
+  background: -o-linear-gradient(#00ab72, #00b074);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ab72', endColorstr='#00b074', GradientType=0);
+  height: 50px;
+}
+.header .inner {
+  position: relative;
+  margin: 0 auto;
+}
+.header .inner .logo {
+  height: 50px;
+  position: relative;
+}
+.header .inner .logo a {
+  text-decoration: none;
+  color: white;
+  line-height: 50px;
+  font-size: 24px;
+}
+.header .inner .more {
+  float: right;
+}
+.header .inner .more div {
+  color: white;
+  height: 25px;
+  float: right;
+}
+.header .inner .more div:hover {
+  background-color: #00e394;
+}
+.header .inner .more div i {
+  padding: 2px;
+  font-size: 14px;
+  width: 15px;
+  text-align: left;
+}
+.header .inner .more div a {
+  padding: 2px;
+  font-size: 12px;
+  line-height: 25px;
+  color: white;
+}
