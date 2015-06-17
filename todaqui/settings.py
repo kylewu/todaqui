@@ -39,6 +39,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django_medusa',
     'todaqui.index',
+    'todaqui.hotsite',
 )
 
 MIDDLEWARE_CLASSES = (

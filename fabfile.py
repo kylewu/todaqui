@@ -24,3 +24,7 @@ def upload():
 
 def sprite():
     local('grunt sprite')
+
+
+def run():
+    local('cd output && python -m SimpleHTTPServer')

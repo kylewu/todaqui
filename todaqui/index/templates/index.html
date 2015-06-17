@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="hotsite container_12">
+      <div class="inner grid_12">
+        {% for site in hotsites %}
+        <div class="site">
+          <a class="hotsite_link" href="{{ site.link }}" target="_blank">
+            <div class="icon icon-{{ site.img_name }}"></div>
+            <span class="span-hot-name">{{ site.name }}</span>
+          </a>
+        </div>
+        {% endfor %}
+      </div>
+  </div>
+  <!-- hotsite end -->
+{% endblock %}
