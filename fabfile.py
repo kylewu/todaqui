@@ -28,3 +28,11 @@ def sprite():
 
 def run():
     local('cd output && python -m SimpleHTTPServer')
+
+
+def dump():
+    local('./manage.py dumpdata --indent 2 auth contenttypes hotsite topic > fixtures.json')
+
+
+def load():
+    local('./manage.py loaddata fixtures.json')
