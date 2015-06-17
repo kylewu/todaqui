@@ -38,8 +38,10 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_medusa',
+    'django_extensions',
     'todaqui.index',
     'todaqui.hotsite',
+    'todaqui.topic',
 )
 
 MIDDLEWARE_CLASSES = (

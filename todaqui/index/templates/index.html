@@ -15,3 +15,24 @@
   </div>
   <!-- hotsite end -->
 {% endblock %}
+
+{% block topic %}
+  <div class="category grid_9">
+
+    {% for t in topics %}
+      <div class="cat">
+        <div class="box">
+          <div class="top">
+            <a href="/{{ t.slug }}">{{ t.name }}</a>
+          </div>
+          <ul>
+            {% for ti in t.topicitem_set.all %}
+            <li><a href="{{ ti.link }}" target="_blank">{{ t.name }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    {% endfor %}
+
+  </div>
+{% endblock %}
