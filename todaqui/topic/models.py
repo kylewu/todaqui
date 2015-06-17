@@ -9,6 +9,9 @@ class Topic(models.Model):
     def __unicode__(self):
         return u'%s (/%s)' % (self.name, self.slug)
 
+    def get_absolute_url(self):
+        return u'/' + self.slug
+
 
 class TopicItem(models.Model):
     topic = models.ForeignKey(Topic)
@@ -18,3 +21,6 @@ class TopicItem(models.Model):
 
     def __unicode__(self):
         return u'(%s) %s' % (self.topic.name, self.name)
+
+    def get_absolute_url(self):
+        return self.link
