@@ -61,3 +61,5 @@ target/
 node_modules/
 
 db.sqlite3
+output/
+upload.tar.gz
