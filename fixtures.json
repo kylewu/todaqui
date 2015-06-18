@@ -107,6 +107,60 @@
 },
 {
   "fields": {
+    "img_name": "youtube",
+    "link": "http://youtube.com",
+    "name": "YouTube"
+  },
+  "model": "hotsite.hotsite",
+  "pk": 3
+},
+{
+  "fields": {
+    "img_name": "amazon",
+    "link": "http://amazon.es",
+    "name": "Amazon"
+  },
+  "model": "hotsite.hotsite",
+  "pk": 4
+},
+{
+  "fields": {
+    "img_name": "ebay",
+    "link": "http://ebay.es",
+    "name": "Ebay"
+  },
+  "model": "hotsite.hotsite",
+  "pk": 5
+},
+{
+  "fields": {
+    "img_name": "wordpress",
+    "link": "https://es.wordpress.com/",
+    "name": "Wordpress"
+  },
+  "model": "hotsite.hotsite",
+  "pk": 6
+},
+{
+  "fields": {
+    "img_name": "yahoo",
+    "link": "http://yahoo.es",
+    "name": "Yahoo"
+  },
+  "model": "hotsite.hotsite",
+  "pk": 7
+},
+{
+  "fields": {
+    "img_name": "linkedin",
+    "link": "https://www.linkedin.com/",
+    "name": "LinkedIn"
+  },
+  "model": "hotsite.hotsite",
+  "pk": 8
+},
+{
+  "fields": {
     "order": 1,
     "name": "Noticias",
     "slug": "noticias"
