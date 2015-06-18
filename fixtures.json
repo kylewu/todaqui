@@ -98,11 +98,39 @@
 },
 {
   "fields": {
+    "img_name": "twitter",
+    "link": "http://twiiter.com",
+    "name": "twitter"
+  },
+  "model": "hotsite.hotsite",
+  "pk": 2
+},
+{
+  "fields": {
     "order": 1,
     "name": "Noticias",
     "slug": "noticias"
   },
   "model": "topic.topic",
+  "pk": 1
+},
+{
+  "fields": {
+    "order": 2,
+    "name": "Musica",
+    "slug": "musica"
+  },
+  "model": "topic.topic",
+  "pk": 2
+},
+{
+  "fields": {
+    "topic": 2,
+    "link": "https://www.spotify.com/es/",
+    "name": "Spotify",
+    "order": 1
+  },
+  "model": "topic.topicitem",
   "pk": 1
 },
 {
@@ -410,7 +438,7 @@
     "is_active": true,
     "is_superuser": true,
     "is_staff": true,
-    "last_login": "2015-06-18T15:57:49.299Z",
+    "last_login": "2015-06-18T17:45:19.542Z",
     "groups": [],
     "user_permissions": [],
     "password": "pbkdf2_sha256$20000$qnzJu5XgHcQ3$CPuwApV5M4go3Dk2IdAzbj+0Z0T/W5JrZlOfazd83rg=",
