@@ -8,29 +8,37 @@ $(function() {
       if ($(this).hasClass("web")) {
         action = "http://google.com/search?";
         $("#search-input").attr("name", "q");
+        $("#hidden-input").attr("name", "");
+        $("#hidden-input").attr("value", "");
 
       } else if ($(this).hasClass("video")){
-        action = "http://google.com/search?";
+        action = "https://www.google.es/search?tbm=isch";
         $("#search-input").attr("name", "q");
+        $("#hidden-input").attr("name", "tbm");
+        $("#hidden-input").attr("value", "vid");
 
       } else if ($(this).hasClass("image")) {
         action = "http://google.com/search?";
         $("#search-input").attr("name", "q");
+        $("#hidden-input").attr("name", "tbm");
+        $("#hidden-input").attr("value", "isch");
 
       } else if ($(this).hasClass("map")) {
         action = "http://google.com/search?";
         $("#search-input").attr("name", "q");
+        $("#hidden-input").attr("name", "tbm");
+        $("#hidden-input").attr("value", "isch");
 
       } else if ($(this).hasClass("wiki")) {
-        action = "http://google.com/search?";
-        $("#search-input").attr("name", "q");
+        action = "https://es.wikipedia.org/wiki/";
+        $("#search-input").attr("name", "");
 
       } else if ($(this).hasClass("translate")) {
-        action = "http://translate.google.com/?";
-        $("#search-input").attr("name", "q");
+        action = "https://translate.google.com/#auto/es/";
+        $("#search-input").attr("name", "");
       }
-
       $("#search-form").attr("action", action);
+
     });
   });
 

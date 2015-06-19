@@ -6,7 +6,7 @@ from ..topic.models import Topic
 
 def index(request):
     hotsites = HotSite.objects.all()
-    topics = Topic.objects.all()
+    topics = Topic.objects.filter(enable=True)
     return render(request, "index.html", {
         'hotsites': hotsites,
         'topics': topics

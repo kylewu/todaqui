@@ -26,8 +26,8 @@
             <a href="/{{ t.slug }}">{{ t.name }}</a>
           </div>
           <ul>
-            {% for ti in t.topicitem_set.all %}
-            <li><a href="{{ ti.link }}" target="_blank">{{ t.name }}</a></li>
+            {% for ti in t.topicitem_set.all|slice:":5" %}
+            <li><a href="{{ ti.link }}" target="_blank">{{ ti.name }}</a></li>
             {% endfor %}
           </ul>
         </div>

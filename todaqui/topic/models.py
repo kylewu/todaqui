@@ -1,10 +1,26 @@
 from django.db import models
 
 
-class Topic(models.Model):
+class BaseTopic(models.Model):
     name = models.CharField(max_length=32)
     slug = models.SlugField(max_length=32)
     order = models.SmallIntegerField(default=1, unique=True)
+    enable = models.BooleanField(db_index=True, default=True)
+
+    class Meta:
+        abstract = True
+
+
+class BaseItem(models.Model):
+    name = models.CharField(max_length=32)
+    link = models.URLField(max_length=512)
+    order = models.SmallIntegerField(default=1)
+
+    class Meta:
+        abstract = True
+
+
+class Topic(BaseTopic):
 
     def __unicode__(self):
         return u'{}: {} (/{})'.format(self.order, self.name, self.slug)
@@ -13,27 +29,21 @@ class Topic(models.Model):
         return u'/{}'.format(self.slug)
 
 
-class TopicItem(models.Model):
+class TopicItem(BaseItem):
     topic = models.ForeignKey(Topic)
-    name = models.CharField(max_length=32)
-    link = models.URLField(max_length=512)
-    order = models.SmallIntegerField(default=1)
 
     class Meta:
         unique_together = (("topic", "order"),)
 
     def __unicode__(self):
-        return u'({}) {}'.format(self.topic.name, self.name)
+        return u'({}:{}) {}'.format(self.topic.name, self.order, self.name)
 
     def get_absolute_url(self):
         return self.link
 
 
-class SubTopic(models.Model):
+class SubTopic(BaseTopic):
     topic = models.ForeignKey(Topic)
-    name = models.CharField(max_length=32)
-    slug = models.SlugField(max_length=32)
-    order = models.SmallIntegerField(default=1, unique=True)
 
     def __unicode__(self):
         return u'{}: {} -> {} (/{})'.format(
@@ -43,11 +53,8 @@ class SubTopic(models.Model):
         return u'/{}'.format(self.slug)
 
 
-class SubTopicItem(models.Model):
+class SubTopicItem(BaseItem):
     subtopic = models.ForeignKey(SubTopic)
-    name = models.CharField(max_length=32)
-    link = models.URLField(max_length=512)
-    order = models.SmallIntegerField(default=1)
 
     class Meta:
         unique_together = (("subtopic", "order"),)

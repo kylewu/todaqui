@@ -24,6 +24,15 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/output\/index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/output\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/output\/static\/admin\/css\/base.css": {
 		"fileType": 16,
 		"ignore": 0,
@@ -469,6 +478,59 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/output\/static\/django_extensions\/css\/jquery.autocomplete.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/output\/static\/django_extensions\/css\/jquery.autocomplete.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/output\/static\/django_extensions\/js\/jquery-1.7.2.min.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/output\/static\/django_extensions\/js\/jquery-1.7.2.min.js",
+		"outputAbbreviatedPath": "\/output\/static\/django_extensions\/static\/js\/jquery-1.7.2.min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/output\/static\/django_extensions\/js\/jquery.ajaxQueue.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/output\/static\/django_extensions\/js\/jquery.ajaxQueue.js",
+		"outputAbbreviatedPath": "\/output\/static\/django_extensions\/static\/js\/jquery.ajaxQueue-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/output\/static\/django_extensions\/js\/jquery.autocomplete.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/output\/static\/django_extensions\/js\/jquery.autocomplete.js",
+		"outputAbbreviatedPath": "\/output\/static\/django_extensions\/static\/js\/jquery.autocomplete-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/output\/static\/django_extensions\/js\/jquery.bgiframe.min.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/output\/static\/django_extensions\/js\/jquery.bgiframe.min.js",
+		"outputAbbreviatedPath": "\/output\/static\/django_extensions\/static\/js\/jquery.bgiframe.min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/output\/static\/img\/google_logo_3D.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -496,7 +558,7 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/output\/static\/js\/main-min.js",
-		"outputAbbreviatedPath": "\/output\/static\/js\/min\/main-min-min.js",
+		"outputAbbreviatedPath": "\/output\/static\/static\/js\/main-min-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
