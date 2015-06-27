@@ -469,15 +469,6 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/output\/static\/css\/sprites.css": {
-		"fileType": 16,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/output\/static\/css\/sprites.css",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
 	"\/output\/static\/django_extensions\/css\/jquery.autocomplete.css": {
 		"fileType": 16,
 		"ignore": 0,
@@ -538,17 +529,6 @@
 		"initialSize": 5711,
 		"inputAbbreviatedPath": "\/output\/static\/img\/google_logo_3D.png",
 		"outputAbbreviatedPath": "\/output\/static\/img\/google_logo_3D.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/output\/static\/img\/sitespritesheet.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 9838,
-		"inputAbbreviatedPath": "\/output\/static\/img\/sitespritesheet.png",
-		"outputAbbreviatedPath": "\/output\/static\/img\/sitespritesheet.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -975,6 +955,17 @@
 		"initialSize": 1447,
 		"inputAbbreviatedPath": "\/todaqui\/static_src\/sprites\/sites\/ebay.png",
 		"outputAbbreviatedPath": "\/todaqui\/static_src\/sprites\/sites\/ebay.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/todaqui\/static_src\/sprites\/sites\/elpais.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1622,
+		"inputAbbreviatedPath": "\/todaqui\/static_src\/sprites\/sites\/elpais.png",
+		"outputAbbreviatedPath": "\/todaqui\/static_src\/sprites\/sites\/elpais.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0

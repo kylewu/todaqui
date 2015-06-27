@@ -161,6 +161,15 @@
 },
 {
   "fields": {
+    "img_name": "elpais",
+    "link": "http://elpais.com",
+    "name": "El Pais"
+  },
+  "model": "hotsite.hotsite",
+  "pk": 9
+},
+{
+  "fields": {
     "enable": true,
     "order": 1,
     "name": "Noticias",
