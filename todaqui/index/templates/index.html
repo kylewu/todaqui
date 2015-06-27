@@ -21,17 +21,19 @@
 
     {% for t in topics %}
       <div class="cat">
-        <div class="box">
-          <div class="top">
-            <a href="/{{ t.slug }}">{{ t.name }}</a>
-          </div>
-          <ul>
-            {% for ti in t.topicitem_set.all|slice:":5" %}
-            <li><a href="{{ ti.link }}" target="_blank">{{ ti.name }}</a></li>
-            {% endfor %}
-          </ul>
+        <div class="top {% cycle 'top1' 'top2' 'top3' 'top4' %}">
+          <span class="bottomline"></span>
+          <a href="/{{ t.slug }}">
+            {{ t.name }}
+          </a>
         </div>
+        <ul>
+          {% for ti in t.topicitem_set.all|slice:":5" %}
+          <li><a href="{{ ti.link }}" target="_blank">{{ ti.name }}</a></li>
+          {% endfor %}
+        </ul>
       </div>
+      <div class="clearfix"></div>
     {% endfor %}
 
   </div>
