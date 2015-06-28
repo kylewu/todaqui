@@ -20,7 +20,7 @@
   <div class="category grid_9">
 
     {% for t in topics %}
-      <div class="cat">
+      <div class="cat clearfix">
         <div class="top {% cycle 'top1' 'top2' 'top3' 'top4' %}">
           <span class="bottomline"></span>
           <a href="/{{ t.slug }}">
@@ -33,7 +33,6 @@
           {% endfor %}
         </ul>
       </div>
-      <div class="clearfix"></div>
     {% endfor %}
 
   </div>
