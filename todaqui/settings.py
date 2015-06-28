@@ -43,6 +43,7 @@ INSTALLED_APPS = (
     'todaqui.index',
     'todaqui.hotsite',
     'todaqui.topic',
+    'todaqui.rssnews',
 )
 
 MIDDLEWARE_CLASSES = (
