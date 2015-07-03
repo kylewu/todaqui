@@ -10,8 +10,8 @@ class BaseTopic(OrderedModel):
         abstract = True
 
     def __unicode__(self):
-        return u'{}: {} (/{})'.format(
-            super(BaseTopic, self).__unicode__(), self.name, self.slug)
+        return u'{}: {}'.format(
+            super(BaseTopic, self).__unicode__(), self.name)
 
 
 class BaseItem(OrderedModel):
@@ -30,27 +30,17 @@ class Topic(BaseTopic):
     def get_absolute_url(self):
         return u'/{}'.format(self.slug)
 
-
-class TopicItem(BaseItem):
-    topic = models.ForeignKey(Topic)
-
-    class Meta:
-        unique_together = (("topic", "order"),)
-
-    def __unicode__(self):
-        return u'{} ({})'.format(
-            super(TopicItem, self).__unicode__(),
-            self.topic.name)
-
-    def get_absolute_url(self):
-        return self.link
+    def frontpage_items(self):
+        return SubTopicItem.objects.filter(
+            shown_in_frontpage=True,
+            subtopic__topic=self)
 
 
 class SubTopic(BaseTopic):
     topic = models.ForeignKey(Topic)
 
     def __unicode__(self):
-        return u'(topic {}) {}'.format(
+        return u'({}) -> {}'.format(
             self.topic.name, super(SubTopic, self).__unicode__())
 
     def get_absolute_url(self):
@@ -59,6 +49,9 @@ class SubTopic(BaseTopic):
 
 class SubTopicItem(BaseItem):
     subtopic = models.ForeignKey(SubTopic)
+
+    shown_in_frontpage = models.BooleanField(default=False)
+    frontpage_order = models.SmallIntegerField(default=1)
 
     class Meta:
         unique_together = (("subtopic", "order"),)
