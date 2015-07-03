@@ -28,8 +28,8 @@
           </a>
         </div>
         <ul>
-          {% for ti in t.topicitem_set.all|slice:":5" %}
-          <li><a href="{{ ti.link }}" target="_blank">{{ ti.name }}</a></li>
+          {% for item in t.frontpage_items %}
+            <li><a href="{{ tem.link }}" target="_blank">{{ item.name }}</a></li>
           {% endfor %}
         </ul>
       </div>
