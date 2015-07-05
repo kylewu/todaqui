@@ -117,3 +117,5 @@ STATICFILES_DIRS = (
 # django_medusa -- disk-based renderer
 MEDUSA_RENDERER_CLASS = "django_medusa.renderers.DiskStaticSiteRenderer"
 MEDUSA_DEPLOY_DIR = os.path.join(BASE_DIR, "output")
+
+GRAPPELLI_ADMIN_TITLE = "Todaqui.es"

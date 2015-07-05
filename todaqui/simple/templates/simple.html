@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="zh-cn"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Simple</title>
+    <meta name="Keywords" content="">
+    <meta name="Description" content="What is simple">
+
+    <!-- Bootstrap -->
+    <style type="text/css"></style><link href="http://cdn.bootcss.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="">
+    <!-- Chrome extension-->
+    <!-- <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/aaaekojmfgkdoliidgddnefhnoibjbpi"> -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/static/css/simple.css"/>
+    <link rel="stylesheet" href="/static/css/spritessimple.css"/>
+
+  </head>
+  <body>
+    <div class="content">
+      <nav class="navbar" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <img class="sprite logo_pic" src="">
+            <img class="sprite logo_char" src="">
+          </div>
+          <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#" data-toggle="modal" data-target="#browserIndexModal" id="browserIndex">添加千山为主页</a></li>
+              <li><a href="#" data-toggle="modal" data-target="#hotkeyModal" id="hotkey">快捷键</a></li>
+              <li><a href="#" data-toggle="modal" data-target="#aboutModal" id="about">关于</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!--#website_dict，blockNo和website序列的字典-->
+      <!--#block_list，区块列表-->
+      <div class="container blocks">
+
+        {% for t in topics %}
+          <div class="col-sm-4 col-lg-4 block"><!--block用来约束分类对应的区块位置，building用来展示实际带边框的分类内容，包括分类标题和分类下的网站-->
+            <div class="col-sm-12 col-lg-12 building">
+
+              <div class="row block-header">
+                <div class="col-sm-12 col-lg-12 block-desc">
+                  <div class="col-sm-4 col-lg-4 block-name">
+                    <a class="block-name" href="#">
+                        {{ t.name }}
+                    </a>
+                  </div>
+                  <div class="col-sm-4 col-lg-4 placeholder"></div>
+                  <div class="col-sm-4 col-lg-4 placeholder"></div>
+                </div>
+              </div>
+
+              {% for item in t.frontpage_items %}
+                <div class="col-sm-6 col-lg-6 website">
+                  <a href="{{ item.link }}" id="91" class="website hotkey" target="_blank">
+                    <span>{{ item.name }}</span>
+                  </a>
+                </div>
+
+              {% endfor %}
+            </div>
+          </div>
+        {% endfor %}
+
+      <!--上面为主体导航内容-->
+      </div>
+    </div>
+
+    <!--分类确认打开碳层-->
+    <div class="modal fade" id="categoryConfirmModal" tabindex="-1" role="dialog" aria-labelledby="sentenceModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            <h4 class="modal-title" id="categoryConfirmModalLabel">小提示</h4>
+          </div>
+          <div class="modal-body">
+            <div class="modal-section category-confirm-content">
+              <h4 id="varText"></h4>
+              <h6>同时会打开9个标签页哦:)</h6>
+            </div>
+            <div class="modal-section">
+              <div class="category-confirm-button">
+                <button id="categoryConfirmButton" type="button" class="btn btn-primary btn-block">确认</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--关于弹层-->
+    <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="sentenceModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+            <h5 class="modal-title" id="sentenceModalLabel">关于千山</h5>
+          </div>
+          <div class="modal-body">
+            <div class="modal-section">
+              <img class="sprite desc_simple img-responsive" alt="simple" src="">
+            </div>
+            <div class="modal-section">
+              <img class="sprite desc_lazy img-responsive" alt="lazy" src="">
+            </div>
+            <div class="modal-placeholder">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--快捷键弹层-->
+    <div class="modal fade" id="hotkeyModal" tabindex="-1" role="dialog" aria-labelledby="sentenceModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+            <h5 class="modal-title" id="sentenceModalLabel">快捷键</h5>
+          </div>
+          <div class="modal-body">
+            <div class="modal-section hotkey-intro">
+              <span id="hotkey-intro">首页按下快捷键，即可直达热门站点</span>
+            </div>
+            <div class="modal-section">
+                <table id="hotkey-table">
+                  <tbody><tr>
+                    <td class="hotkey"><span>B</span></td>
+                    <td class="hotkey-desc"><span>百度</span></td>
+                    <td class="hotkey-placeholder"></td>
+                    <td class="hotkey"><span>空格</span></td>
+                    <td class="hotkey-desc"><span>百度</span></td>
+                  </tr>
+                  <tr>
+                    <td class="hotkey"><span>Q</span></td>
+                    <td class="hotkey-desc"><span>百度</span></td>
+                    <td class="hotkey-placeholder"></td>
+                    <td class="hotkey"><span>G</span></td>
+                    <td class="hotkey-desc"><span>谷歌</span></td>
+                  </tr>
+                  <tr>
+                    <td class="hotkey"><span>W</span></td>
+                    <td class="hotkey-desc"><span>微博</span></td>
+                    <td class="hotkey-placeholder"></td>
+                    <td class="hotkey"><span>D</span></td>
+                    <td class="hotkey-desc"><span>豆瓣</span></td>
+                  </tr>
+                  <tr>
+                    <td class="hotkey"><span>T</span></td>
+                    <td class="hotkey-desc"><span>淘宝</span></td>
+                    <td class="hotkey-placeholder"></td>
+                    <td class="hotkey"><span>S</span></td>
+                    <td class="hotkey-desc"><span>值得买</span></td>
+                  </tr>
+                  <tr>
+                    <td class="hotkey"><span>Z</span></td>
+                    <td class="hotkey-desc"><span>知乎</span></td>
+                    <td class="hotkey-placeholder"></td>
+                    <td class="hotkey"><span>X</span></td>
+                    <td class="hotkey-desc"><span>雪球</span></td>
+                  </tr>
+                  <tr>
+                    <td class="hotkey"><span>A</span></td>
+                    <td class="hotkey-desc"><span>A站</span></td>
+                    <td class="hotkey-placeholder"></td>
+                    <td class="hotkey"><span>I</span></td>
+                    <td class="hotkey-desc"><span>B站</span></td>
+                  </tr>
+                  <tr>
+                    <td class="hotkey"><span>J</span></td>
+                    <td class="hotkey-desc"><span>简书</span></td>
+                    <td class="hotkey-placeholder"></td>
+                    <td class="hotkey"><span>L</span></td>
+                    <td class="hotkey-desc"><span>Lofter</span></td>
+                  </tr>
+                  <tr>
+                    <td class="hotkey"><span>V</span></td>
+                    <td class="hotkey-desc"><span>V2EX</span></td>
+                    <td class="hotkey-placeholder"></td>
+                    <td class="hotkey"><span>H</span></td>
+                    <td class="hotkey-desc"><span>虎扑</span></td>
+                  </tr>
+                  <tr>
+                    <td class="hotkey"><span>M</span></td>
+                    <td class="hotkey-desc"><span>美团</span></td>
+                    <td class="hotkey-placeholder"></td>
+                    <td class="hotkey"><span>P</span></td>
+                    <td class="hotkey-desc"><span>支付宝</span></td>
+                  </tr>
+                  <tr>
+                    <td class="hotkey"><span>E</span></td>
+                    <td class="hotkey-desc"><span>网易</span></td>
+                    <td class="hotkey-placeholder"></td>
+                    <td class="hotkey"><span>Y</span></td>
+                    <td class="hotkey-desc"><span>有道词典</span></td>
+                  </tr>
+                  <tr>
+                    <td class="hotkey"><span>C</span></td>
+                    <td class="hotkey-desc"><span>Chiphell</span></td>
+                    <td class="hotkey-placeholder"></td>
+                    <td class="hotkey"><span>N</span></td>
+                    <td class="hotkey-desc"><span>去哪</span></td>
+                  </tr>
+                </tbody></table>
+            </div>
+            <div class="modal-placeholder">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--设置为浏览器首页弹层-->
+    <div class="modal fade" id="browserIndexModal" tabindex="-1" role="dialog" aria-labelledby="sentenceModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+            <h5 class="modal-title" id="sentenceModalLabel">添加千山为主页</h5>
+          </div>
+          <div class="modal-body">
+            <div class="modal-section browser_index_tips multi_browser_background" id="index_tips_chrome" style="display: inherit;">
+              <div class="single_browser_unit" id="chrome_extension_tips">
+                <p><span>如果您正在使用Chrome浏览器</span></p>
+                <dl class="dl-horizontal">
+                  <dt>设置主页</dt>
+                  <dd>点击<span class="keywords">设置</span> ，在<span class="keywords">启动时</span>一栏，设置<span class="keywords">启动页</span>为<kbd>qianshan.co</kbd></dd>
+                  <dt>设置新标签页</dt>
+                  <dd><a id="chrome_extension" href="http://qianshan.co/#">安装千山Chrome插件</a></dd>
+                </dl>
+              </div>
+              <div class="split_line"></div>
+              <div class="single_browser_unit" id="360safe_tips">
+                <p><span>如果您正在使用360安全浏览器</span></p>
+                <dl class="dl-horizontal">
+                  <dt>进入设置面板</dt>
+                  <dd>点击<span class="keywords">工具</span>，然后点击<span class="keywords">选项</span></dd>
+                  <dt>设置主页</dt>
+                  <dd>在<span class="keywords">启动时打开</span>一栏，修改<span class="keywords">主页</span>为<kbd>qianshan.co</kbd></dd>
+                  <dt>设置新标签页</dt>
+                  <dd>很遗憾，360安全浏览器暂时无法自定义新标签页</dd>
+                </dl>
+              </div>
+              <div class="split_line"></div>
+              <div class="single_browser_unit" id="other_browser_tips">
+                <p><span>如果您正在使用其他浏览器(360极速、世界之窗、hao123等)</span></p>
+                <dl class="dl-horizontal">
+                  <dt>进入设置面板</dt>
+                  <dd>点击<span class="keywords">偏好设置</span>或<span class="keywords">设置</span>的浏览器选项</dd>
+                  <dt>设置主页</dt>
+                  <dd>设置<span class="keywords">主页</span>为<kbd>qianshan.co</kbd></dd>
+                  <dt>设置新标签页</dt>
+                  <dd>将<span class="keywords">新标签页</span>或<span class="keywords">新选项卡</span>设置为<span class="keywords">主页</span></dd>
+                </dl>
+              </div>
+            </div>
+            <div class="modal-section browser_index_tips row" id="index_tips_safari">
+              <div class="col-xs-12 col-lg-12">
+                <h5>您正在使用Safari浏览器，请参考如下步骤设置</h5>
+                <dl class="dl-horizontal">
+                  <dt>进入设置面板</dt>
+                  <dd>任务栏点击<span class="keywords">Safari</span>，然后点击<span class="keywords">偏好设置</span></dd>
+                  <dt>设置主页</dt>
+                  <dd>在<span class="keywords">通用</span>选项卡下，设置<span class="keywords">主页</span>为<kbd>qianshan.co</kbd></dd>
+                  <dt>设置新标签页</dt>
+                  <dd>设置<span class="keywords">新窗口打开方式</span>和<span class="keywords">新标签页打开方式</span>为<span class="keywords">主页</span></dd>
+                </dl>
+              </div>
+            </div>
+            <div class="modal-section browser_index_tips row" id="index_tips_firefox">
+              <div class="col-xs-12 col-lg-12">
+                <h5>您正在使用Firefox浏览器，请参考如下步骤设置</h5>
+                <dl class="dl-horizontal">
+                  <dt>进入设置面板</dt>
+                  <dd>点击<span class="keywords">首选项</span></dd>
+                  <dt>设置主页</dt>
+                  <dd>在<span class="keywords">常规</span>选项卡下，设置<span class="keywords">主页</span>为<kbd>qianshan.co</kbd></dd>
+                </dl>
+              </div>
+            </div>
+            <div class="modal-section browser_index_tips row" id="index_tips_ie">
+              <div class="col-xs-12 col-lg-12">
+                <h5>您正在使用IE浏览器，请参考如下步骤设置</h5>
+                <dl class="dl-horizontal">
+                  <dt>设置主页</dt>
+                  <dd>点击<span class="keywords">Internet选项</span>，在<span class="keywords">常规</span>选项卡下，设置<span class="keywords">主页</span>为<kbd>qianshan.co</kbd></dd>
+                  <dt>设置新标签页</dt>
+                  <dd>在<span class="keywords">选项卡</span>一栏，点击<span class="keywords">设置</span>，在<span class="keywords">打开选项卡后，打开</span>一栏，选择<span class="keywords">您的第一个主页</span></dd>
+                </dl>
+              </div>
+            </div>
+            <div class="modal-section browser_index_tips row" id="index_tips_sougou">
+              <div class="col-xs-12 col-lg-12">
+                <h5>您正在使用搜狗浏览器，请参考如下步骤设置</h5>
+                <dl class="dl-horizontal">
+                  <dt>进入设置面板</dt>
+                  <dd>点击<span class="keywords">工具</span>，然后点击<span class="keywords">选项</span></dd>
+                  <dt>设置主页</dt>
+                  <dd>在<span class="keywords">基本设置</span>页卡下，自定义<span class="keywords">主页</span>为<kbd>qianshan.co</kbd></dd>
+                  <dt>设置新标签页</dt>
+                  <dd>在<span class="keywords">标签设置</span>页卡下，自定义<span class="keywords">新建标签页时打开</span>为<kbd>qianshan.co</kbd></dd>
+                </dl>
+              </div>
+            </div>
+            <div class="modal-section browser_index_tips row" id="index_tips_liebao">
+              <div class="col-xs-12 col-lg-12">
+                <h5>您正在使用猎豹浏览器，请参考如下步骤设置</h5>
+                <dl class="dl-horizontal">
+                  <dt>进入设置面板</dt>
+                  <dd>点击<span class="keywords">猎豹图标</span>，然后点击<span class="keywords">选项/设置</span></dd>
+                  <dt>设置主页</dt>
+                  <dd>在<span class="keywords">基本设置</span>页卡下， 设置<span class="keywords">主页设置</span>为<span class="keywords">添加新网页</span>，输入<kbd>qianshan.co</kbd></dd>
+                  <dt>设置新标签页</dt>
+                  <dd>在<span class="keywords">标签设置</span>页卡下，设置<span class="keywords">新标签页打开</span>为<span class="keywords">主页</span></dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/static/js/simple-min.js"></script
+    <!--Google Analytics代码-->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA--1', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+</body></html>

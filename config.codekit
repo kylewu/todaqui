@@ -606,6 +606,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/todaqui\/simple\/templates\/simple.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/todaqui\/simple\/templates\/simple.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/todaqui\/static\/css\/960_12_col.css": {
 		"fileType": 16,
 		"ignore": 0,
@@ -651,11 +660,29 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/todaqui\/static\/css\/simple.css": {
+		"fileType": 16,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/todaqui\/static\/css\/simple.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/todaqui\/static\/css\/sprites.css": {
 		"fileType": 16,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/todaqui\/static\/css\/sprites.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/todaqui\/static\/css\/spritessimple.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/todaqui\/static\/css\/spritessimple.css",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -682,12 +709,34 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/todaqui\/static\/img\/spritesimple.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 0,
+		"inputAbbreviatedPath": "\/todaqui\/static\/img\/spritesimple.png",
+		"outputAbbreviatedPath": "\/todaqui\/static\/img\/spritesimple.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/todaqui\/static\/js\/main-min.js": {
 		"fileType": 64,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/todaqui\/static\/js\/main-min.js",
 		"outputAbbreviatedPath": "\/todaqui\/static\/js\/min\/main-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/todaqui\/static\/js\/simple-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/todaqui\/static\/js\/simple-min.js",
+		"outputAbbreviatedPath": "\/todaqui\/static\/static\/js\/simple-min-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -734,6 +783,17 @@
 		"outputAbbreviatedPath": "\/todaqui\/static_src\/js\/min\/plugins-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/todaqui\/static_src\/js\/simple.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/todaqui\/static_src\/js\/simple.js",
+		"outputAbbreviatedPath": "\/todaqui\/static\/js\/simple-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 1,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
@@ -917,6 +977,26 @@
 		"strictMath": 0,
 		"strictUnits": 0
 		},
+	"\/todaqui\/static_src\/less\/simple.less": {
+		"allowInsecureImports": 0,
+		"createSourceMap": 0,
+		"disableJavascript": 0,
+		"fileType": 1,
+		"ieCompatibility": 1,
+		"ignore": 0,
+		"ignoreWasSetByUser": 1,
+		"inputAbbreviatedPath": "\/todaqui\/static_src\/less\/simple.less",
+		"outputAbbreviatedPath": "\/todaqui\/static\/css\/simple.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 1,
+		"outputStyle": 1,
+		"relativeURLS": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"strictImports": 0,
+		"strictMath": 0,
+		"strictUnits": 0
+		},
 	"\/todaqui\/static_src\/less\/useful.less": {
 		"allowInsecureImports": 0,
 		"createSourceMap": 0,
@@ -1055,6 +1135,17 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
+		},
+	"\/todaqui\/static_src\/static\/js\/simple-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/todaqui\/static_src\/static\/js\/simple-min.js",
+		"outputAbbreviatedPath": "\/todaqui\/static_src\/static\/static\/js\/simple-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
 		},
 	"\/todaqui\/templates\/base.html": {
 		"fileType": 8192,
