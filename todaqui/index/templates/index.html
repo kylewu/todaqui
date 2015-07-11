@@ -20,10 +20,11 @@
   <div class="category grid_9">
 
     {% for t in topics %}
+    {% if t.frontpage_items %}
       <div class="cat clearfix">
         <div class="top {% cycle 'top1' 'top2' 'top3' 'top4' %}">
           <span class="bottomline"></span>
-          <a href="/{{ t.slug }}">
+          <a href="#">
             {{ t.name }}
           </a>
         </div>
@@ -33,6 +34,7 @@
           {% endfor %}
         </ul>
       </div>
+    {% endif %}
     {% endfor %}
 
   </div>
